@@ -40,8 +40,8 @@ class Persona:
 
 
 class VCasual(Persona):
-    def __init__(self, Nombre, Polera, Jeans, Calzado):
-        Persona.__init__(self, Nombre, Calzado)
+    def __init__(self, Polera, Jeans, Calzado):
+        Persona.__init__(self, Calzado)
         self.__Polera = Polera
         self.__Jeans = Jeans
 
@@ -57,8 +57,8 @@ class VCasual(Persona):
         self.__Jeans = NewJeans
 
 class VFormal(Persona):
-    def __init__(self, Nombre, Camisa, Saco, Corbata, Pantalon_Vestir, Calzado):
-        Persona.__init__(self, Nombre, Calzado)
+    def __init__(self, Camisa, Saco, Corbata, Pantalon_Vestir, Calzado):
+        Persona.__init__(self, Calzado)
         self.__Camisa = Camisa
         self.__Saco = Saco
         self.__Corbata = Corbata
@@ -89,8 +89,8 @@ class VFormal(Persona):
         self.__Pantalon_Vestir = NewPantalon
 
 class VUniforme(Persona):
-    def __init__(self, Nombre, Uniforme, Calzado):
-        Persona.__init__(self, Nombre, Calzado)
+    def __init__(self, Uniforme, Calzado):
+        Persona.__init__(self, Calzado)
         self.__Uniforme = Uniforme
 
     def getUniforme(self):

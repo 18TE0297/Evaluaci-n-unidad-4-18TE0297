@@ -24,8 +24,8 @@ while True:
                         print("Bienvenido a", Empresa, "Gerente")
                         print("Para seguir su proceso es necesario ingresar sus datos en el siguiente formato", "\n",
                               "Nombre, Sexo, Edad_años, Estatura.m, Cargo")
-                        Gerente1 = input(Vestirse.Persona)
-                        print(Gerente1)
+                        Usuario = input(Vestirse.Persona)
+                        print(Usuario)
                     if perfil == 2:
                         print("Biemvenido a", Empresa, "aspirante")
                     break
@@ -53,18 +53,57 @@ while True:
                               "2.- Vestimenta Formal", "\n",
                               "3.- Vestimenta Uniforme")
                         while True:
-                            try:
-                                Outfit = float(input("Ingrese la eleccion de su perfil: "))
-                                if ((Outfit >= 1) & (Outfit <= 3)):
-                                    if perfil == 1:
-                                        print()
+                                    try:
+                                        Outfit = float(input("Ingrese la eleccion de su Outfit: "))
+                                        if ((Outfit >= 1) & (Outfit <= 3)):
+                                            if Outfit == 1:
+                                                print("Exelente decision, favor de introducir sus prendas en el siguiente formato.","\n",
+                                                      "Polera(Playera o Sudadera casual), Jeans(Short, Bermuda, pans, Pantalon), Calzado")
+                                                VestCasual = input(Vestirse.VCasual)
+                                                print(VestCasual)
+                                                print("¿Que mas desea realizar hoy?,", "\n",
+                                                      "Favor de verificar las opciones disponibles")
+                                                print(" 1.-Vestirse", "\n",
+                                                      "2.-Trabajar", "\n",
+                                                      "3.-Entrevistar", "\n",
+                                                      "4.-Salir")
+                                                break
+                                            if Outfit == 2:
+                                                print("Exelente decision, favor de introducir sus prendas en el siguiente formato.","\n",
+                                                        "Camiosa, Saco, Corbata, Pantalon de vestir, Calzado")
+                                                VestFormal = input(Vestirse.VFormal)
+                                                print(VestFormal)
+                                                print("¿Que mas desea realizar hoy?,", "\n",
+                                                      "Favor de verificar las opciones disponibles")
+                                                print(" 1.-Vestirse", "\n",
+                                                      "2.-Trabajar", "\n",
+                                                      "3.-Entrevistar", "\n",
+                                                      "4.-Salir")
+                                                break
+                                            if Outfit == 3:
+                                                print("Exelente decision, favor de introducir sus prendas en el siguiente formato.", "\n",
+                                                    "Uniforme(Descripcion), Calzado")
+                                                VestUniforme = input(Vestirse.VUniforme)
+                                                print(VestUniforme)
+                                                print("¿Que mas desea realizar hoy?,", "\n",
+                                                      "Favor de verificar las opciones disponibles")
+                                                print(" 1.-Vestirse", "\n",
+                                                      "2.-Trabajar", "\n",
+                                                      "3.-Entrevistar", "\n",
+                                                      "4.-Salir")
+                                                break
 
+                                        else:
+                                            print("Ingrese su eleccion en el rango otorgado")
+
+                                    except ValueError:
+                                        print("Por favor, ingrese solo valores numerico")
                     if eleccion == 2:
                         print("Bienvenido a su trabajo.", "\n","Sus pendientes son:")
                     if eleccion == 3:
                         print("Bienvenido Comenzaremos su entrevista")
                     if eleccion == 4:
-                        print("Hasta pronto")
+                        print("Hasta pronto, Que tenga un buen dia")
                         break
                 else:
                     print("Ingrese su eleccion en el rango otorgado")
