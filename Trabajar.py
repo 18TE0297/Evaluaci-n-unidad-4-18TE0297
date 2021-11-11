@@ -9,8 +9,12 @@ class Gerente:
         self.__Antiguedad = Antiguedad
         Pers.Persona.__init__(self, Nombre, Sexo, Edad, Estatura, Cargo)
 
-class Empleado:
-    def __init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia):
-        self.__Area_de_trabajo = Area_de_experiencia
-        self.__Tiempo_de_experiencia = Tiempo_de_experiencia
-        Pers.Persona.__init__(self, Nombre, Sexo, Edad, Estatura, Cargo)
+    def Formato(self):
+        print("Favor de llenar el formato", type(self).__name__)
+    def Planificar(self):
+
+
+    #def Organizar(self):
+
+    #def Entrevista_de_trabajo(self):
+

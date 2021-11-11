@@ -12,15 +12,13 @@ Solicitud de informacion.-
     en el que hayas cometido un error, ¿cómo lo solucionaste?
 """
 import csv
-import Trabajar as Trabajador
-
 
 class Entrevista:
      def __init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia):
         Trabajador.Empleado.__init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia)
 
 
-listaPreguntas = []
+"""listaPreguntas = []
 
 with open('Preguntas.csv', newline='') as csvfile:
     mispreguntas = csv.DictReader(csvfile)
@@ -31,6 +29,6 @@ with open('Preguntas.csv', newline='') as csvfile:
     i=1
     for pregunta in listaPreguntas:
         print(i, pregunta)
-        i = i + 1
+        i = i + 1"""
 
 
