@@ -16,6 +16,7 @@ class VCasual(Persona):
         self.Jeans = Jeans
         self.Calzado = Calzado
         Persona.__init__(self, Nombre)
+
 """class VFormal:
 
 class VUniforme:"""
