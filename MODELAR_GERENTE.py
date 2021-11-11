@@ -9,5 +9,4 @@ Deberás generar múltiples archivos que representen la situación de la vida re
 de programación. Así tendrás varias clases como son: gerente, persona, empleado, empresa,
 vestimenta, saco, etc. Debes establecer en ellas comportamientos como vestirse, trabajar
 y entrevistar que hagan que el escenario cobre vida.
-
 """
