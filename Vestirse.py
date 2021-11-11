@@ -9,3 +9,14 @@ class Persona:
         self.__Edad = Edad
         self.__Estatura = Estatura
         self.__Cargo = Cargo
+
+class VCasual(Persona):
+    def __init__(self, Nombre, Polera, Jeans, Calzado):
+        self.Polera = Polera
+        self.Jeans = Jeans
+        self.Calzado = Calzado
+        Persona.__init__(self, Nombre)
+"""class VFormal:
+
+class VUniforme:"""
+
