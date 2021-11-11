@@ -2,6 +2,7 @@
 Clase_Persona, Nombre, Sexo, Edad, Estatura, Cargo.
 Clase_Vestirese, Casual, Formal, Uniforme.
 """
+
 class Persona:
     def __init__(self, Nombre, Sexo, Edad, Estatura, Cargo=None, Calzado = None):
         self.__Nombre = Nombre
@@ -36,9 +37,6 @@ class Persona:
     def setCalzado(self, NewCalzado):
         self.__Calzado = NewCalzado
 
-    def Registro(self):
-        print("Solucitud de informacion de usuarios")
-        Gerente = input(Persona)
 
 
 class VCasual(Persona):
