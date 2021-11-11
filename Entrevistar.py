@@ -13,15 +13,24 @@ Solicitud de informacion.-
 """
 import csv
 import Trabajar as Trabajador
-Encuesta = []
-lista_preguntas = []
 
-with open('Preguntas.csv', newline='') as csvfile:
-    mispreguntas = csv.DictReader(csvfile)
-    for filas in mispreguntas:
-        print(filas)
-    csvfile.close()
 
 class Entrevista:
      def __init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia):
         Trabajador.Empleado.__init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia)
+
+
+listaPreguntas = []
+
+with open('Preguntas.csv', newline='') as csvfile:
+    mispreguntas = csv.DictReader(csvfile)
+    for filas in mispreguntas:
+        auxpreguntas = filas["Pregunta"], filas["Respuesta"]
+        listaPreguntas.append(auxpreguntas)
+    csvfile.close()
+    i=1
+    for pregunta in listaPreguntas:
+        print(i, pregunta)
+        i = i + 1
+
+

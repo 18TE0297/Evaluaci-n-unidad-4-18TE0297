@@ -3,6 +3,7 @@ Clase Gerente, Nombre, Edad, Sexo, Antiguedad
 Clase Empleado, Nombre, Edad, Sexo, Estatura, Area de experiencia, Tiempo de experiencia
 """
 import Vestirse as Pers
+
 class Gerente:
     def __init__(self, Nombre, Sexo, Edad, Estatura, Cargo, Antiguedad):
         self.__Antiguedad = Antiguedad
