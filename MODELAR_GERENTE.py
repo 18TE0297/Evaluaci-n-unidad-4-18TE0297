@@ -22,6 +22,10 @@ while True:
                 if ((perfil >= 1) & (perfil <= 2)):
                     if perfil == 1:
                         print("Bienvenido a", Empresa, "Gerente")
+                        print("Para seguir su proceso es necesario ingresar sus datos en el siguiente formato", "\n",
+                              "Nombre, Sexo, Edad_años, Estatura.m, Cargo")
+                        Gerente1 = input(Vestirse.Persona)
+                        print(Gerente1)
                     if perfil == 2:
                         print("Biemvenido a", Empresa, "aspirante")
                     break
@@ -44,6 +48,17 @@ while True:
                 if ((eleccion >= 1) & (eleccion <= 4)):
                     if eleccion == 1:
                         print("Bienvenido comenzaremos a seleccionar su Outfit")
+                        print("Favor se seleccionar su el estilo que desea portar el dia de hoy", "\n",
+                              "1.- Vestimenta Casual", "\n",
+                              "2.- Vestimenta Formal", "\n",
+                              "3.- Vestimenta Uniforme")
+                        while True:
+                            try:
+                                Outfit = float(input("Ingrese la eleccion de su perfil: "))
+                                if ((Outfit >= 1) & (Outfit <= 3)):
+                                    if perfil == 1:
+                                        print()
+
                     if eleccion == 2:
                         print("Bienvenido a su trabajo.", "\n","Sus pendientes son:")
                     if eleccion == 3:
