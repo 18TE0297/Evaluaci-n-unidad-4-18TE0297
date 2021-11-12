@@ -17,5 +17,3 @@ class Persona_Entrevistada:
         Trabajador.Empleado.__init__(self, Nombre, Sexo, Edad, Estatura)
         self.__Area_de_experiencia = Area_de_experiencia
         self.__Tiempo_de_experiencia = Tiempo_de_experiencia
-
-
