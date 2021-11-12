@@ -94,7 +94,7 @@ class VUniforme(Persona):
         self.__Uniforme = Uniforme
 
     def getUniforme(self):
-        return self.__Pantalon_Vestir
+        return self.__Uniforme
 
     def setUniforme(self, NewUniforme):
         self.__Uniforme = NewUniforme
