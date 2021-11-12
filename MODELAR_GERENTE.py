@@ -11,6 +11,8 @@ vestimenta, saco, etc. Debes establecer en ellas comportamientos como vestirse, 
 y entrevistar que hagan que el escenario cobre vida.
 """
 import Vestirse, Trabajar, Entrevistar
+def Usuario():
+    print(Datos)
 
 Empresa = input(print("Ingrese el nombre de la empresa"))
 print("Bienvenido a", Empresa, "favor de seleccionar su perfil","\n",
@@ -24,17 +26,22 @@ while True:
                         print("Bienvenido a", Empresa, "Gerente")
                         print("Para seguir su proceso es necesario ingresar sus datos en el siguiente formato", "\n",
                               "Nombre, Sexo, Edad_años, Estatura.m, Cargo")
-                        Usuario = input(Vestirse.Persona)
-                        print(Usuario)
+                        Datos = input(Vestirse.Persona)
+                        print(Datos)
+                        break
                     if perfil == 2:
                         print("Biemvenido a", Empresa, "aspirante")
-                    break
+                        print("Para seguir su proceso es necesario ingresar sus datos en el siguiente formato", "\n",
+                              "Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia")
+                        Datos = input(Entrevistar.Persona_Entrevistada)
+                        print(Datos)
+                        break
+
                 else:
                     print("Ingrese su eleccion en el rango otorgado")
 
             except ValueError:
                 print("Por favor, ingrese solo valores numerico")
-
 
 print("¿Que desea Realizar hoy?,", "\n"
       "Favor de verificar las opciones disponibles")
@@ -60,6 +67,7 @@ while True:
                                                 print("Exelente decision, favor de introducir sus prendas en el siguiente formato.","\n",
                                                       "Polera(Playera o Sudadera casual), Jeans(Short, Bermuda, pans, Pantalon), Calzado")
                                                 VestCasual = input(Vestirse.VCasual)
+                                                print(Datos)
                                                 print(VestCasual)
                                                 print("¿Que mas desea realizar hoy?,", "\n",
                                                       "Favor de verificar las opciones disponibles")
@@ -72,6 +80,7 @@ while True:
                                                 print("Exelente decision, favor de introducir sus prendas en el siguiente formato.","\n",
                                                         "Camiosa, Saco, Corbata, Pantalon de vestir, Calzado")
                                                 VestFormal = input(Vestirse.VFormal)
+                                                print(Datos)
                                                 print(VestFormal)
                                                 print("¿Que mas desea realizar hoy?,", "\n",
                                                       "Favor de verificar las opciones disponibles")
@@ -84,6 +93,7 @@ while True:
                                                 print("Exelente decision, favor de introducir sus prendas en el siguiente formato.", "\n",
                                                     "Uniforme(Descripcion), Calzado")
                                                 VestUniforme = input(Vestirse.VUniforme)
+                                                print(Datos)
                                                 print(VestUniforme)
                                                 print("¿Que mas desea realizar hoy?,", "\n",
                                                       "Favor de verificar las opciones disponibles")
@@ -110,7 +120,3 @@ while True:
 
             except ValueError:
                 print("Por favor, ingrese solo valores numerico")
-
-
-
-

@@ -12,11 +12,15 @@ Solicitud de informacion.-
     en el que hayas cometido un error, ¿cómo lo solucionaste?
 """
 import csv
-
-class Entrevista:
+class Persona_Entrevistada:
+    def __init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia):
+        Trabajador.Empleado.__init__(self, Nombre, Sexo, Edad, Estatura)
+        self.__Area_de_experiencia = Area_de_experiencia
+        self.__Tiempo_de_experiencia = Tiempo_de_experiencia
+"""class Entrevista:
      def __init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia):
         Trabajador.Empleado.__init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia)
-
+"""
 
 """listaPreguntas = []
 
