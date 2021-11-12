@@ -8,8 +8,5 @@ class Gerente:
         self.__Antiguedad = Antiguedad
         Vestirse.Persona.__init__(self, Nombre, Sexo, Edad, Estatura, Cargo)
 
-    def Formato(self):
-        print("Favor de llenar el formato", type(self).__name__)
-
-   # def Entrevista_de_trabajo(self):
+    #def Entrevista_de_trabajo(self):
 

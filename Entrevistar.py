@@ -17,22 +17,5 @@ class Persona_Entrevistada:
         Trabajador.Empleado.__init__(self, Nombre, Sexo, Edad, Estatura)
         self.__Area_de_experiencia = Area_de_experiencia
         self.__Tiempo_de_experiencia = Tiempo_de_experiencia
-"""class Entrevista:
-     def __init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia):
-        Trabajador.Empleado.__init__(self, Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia)
-"""
-
-"""listaPreguntas = []
-
-with open('Preguntas.csv', newline='') as csvfile:
-    mispreguntas = csv.DictReader(csvfile)
-    for filas in mispreguntas:
-        auxpreguntas = filas["Pregunta"], filas["Respuesta"]
-        listaPreguntas.append(auxpreguntas)
-    csvfile.close()
-    i=1
-    for pregunta in listaPreguntas:
-        print(i, pregunta)
-        i = i + 1"""
 
 

@@ -11,8 +11,12 @@ vestimenta, saco, etc. Debes establecer en ellas comportamientos como vestirse, 
 y entrevistar que hagan que el escenario cobre vida.
 """
 import Vestirse, Trabajar, Entrevistar
+import csv
+import pprint
 def Usuario():
     print(Datos)
+def Entrevistado():
+    print(Datos1)
 
 Empresa = input(print("Ingrese el nombre de la empresa"))
 print("Bienvenido a", Empresa, "favor de seleccionar su perfil","\n",
@@ -25,8 +29,8 @@ while True:
                     if perfil == 1:
                         print("Bienvenido a", Empresa, "Gerente")
                         print("Para seguir su proceso es necesario ingresar sus datos en el siguiente formato", "\n",
-                              "Nombre, Sexo, Edad_años, Estatura.m, Cargo")
-                        Datos = input(Vestirse.Persona)
+                              "Nombre, Sexo, Edad_años, Estatura_m, Cargo, Antiguedad")
+                        Datos = input(Trabajar.Gerente)
                         print(Datos)
                         break
                     if perfil == 2:
@@ -110,6 +114,71 @@ while True:
                                         print("Por favor, ingrese solo valores numerico")
                     if eleccion == 2:
                         print("Bienvenido a su trabajo.", "\n","Sus pendientes son:")
+                        print("Favor de seleccionar el pendiente que realizara el dia de hoy","\n",
+                              "1.- Entreviar_Asprantes","\n",
+                              "2.- Supervicion_control")
+                        while True:
+                            try:
+                                Trabajo = float(input("Ingrese la eleccion del trabajo a realizar:"))
+                                if ((Trabajo >= 1) & (Trabajo <= 3)):
+                                    if Trabajo == 1:
+                                        print("Bienvenivo aspirante soy", Datos, "Te precento el cuestionario que deberas llenar")
+                                        print("Nombre, Sexo, Edad, Estatura, Area_de_experiencia, Tiempo_de_experiencia")
+                                        Datos1 = input(Entrevistar.Persona_Entrevistada)
+                                        print(Datos1)
+                                        print("A continuacion se muestran las preguntas que debera contestar")
+
+                                        listaPreguntas = []
+
+                                        with open('Preguntas.csv', newline='') as csvfile:
+                                            mispreguntas = csv.DictReader(csvfile)
+                                            for filas in mispreguntas:
+                                                auxpreguntas = filas["Pregunta"], filas["Respuesta"]
+                                                listaPreguntas.append(auxpreguntas)
+                                            csvfile.close()
+                                            i = 1
+                                            for pregunta in listaPreguntas:
+                                                print(i, pregunta)
+                                                i = i + 1
+                                        Misrespuestas = {
+                                            'Pregunta1': input("R1="),
+                                            'Pregunta2': input("R2="),
+                                            'Pregunta3': input("R3="),
+                                            'Pregunta4': input("R4="),
+                                            'Pregunta5': input("R5="),
+                                            'Pregunta6': input("R6="),
+                                            'Pregunta7': input("R7="),
+                                            'Pregunta8': input("R8=")
+                                        }
+                                        pprint.pprint(Misrespuestas)
+                                        print("¿Que mas desea realizar hoy?,", "\n",
+                                              "Favor de verificar las opciones disponibles")
+                                        print(" 1.-Vestirse", "\n",
+                                              "2.-Trabajar", "\n",
+                                              "3.-Entrevistar", "\n",
+                                              "4.-Salir")
+                                        break
+                                    if Trabajo == 2:
+                                        print(
+                                            "Exelente decision, favor de introducir sus prendas en el siguiente formato.",
+                                            "\n",
+                                            "Camiosa, Saco, Corbata, Pantalon de vestir, Calzado")
+                                        VestFormal = input(Vestirse.VFormal)
+                                        print(Datos)
+                                        print(VestFormal)
+                                        print("¿Que mas desea realizar hoy?,", "\n",
+                                              "Favor de verificar las opciones disponibles")
+                                        print(" 1.-Vestirse", "\n",
+                                              "2.-Trabajar", "\n",
+                                              "3.-Entrevistar", "\n",
+                                              "4.-Salir")
+                                        break
+
+                                else:
+                                    print("Ingrese su eleccion en el rango otorgado")
+
+                            except ValueError:
+                                print("Por favor, ingrese solo valores numerico")
                     if eleccion == 3:
                         print("Bienvenido Comenzaremos su entrevista")
                     if eleccion == 4:
