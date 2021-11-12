@@ -8,5 +8,9 @@ class Gerente:
         self.__Antiguedad = Antiguedad
         Vestirse.Persona.__init__(self, Nombre, Sexo, Edad, Estatura, Cargo)
 
-    #def Entrevista_de_trabajo(self):
+class Supervicion_planta:
+    def __init__(self, Nombre, Cargo, Fecha, Hora):
+        self.__Fecha = Fecha
+        self.__Hora = Hora
+        Vestirse.Persona.__init__(self, Nombre, Cargo)
 
